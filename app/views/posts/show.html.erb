@@ -1,0 +1,12 @@
+
+<p><%= @post.body %></p>
+
+<%= link_to 'edit', edit_post_path(@post), :class => 'btn btn-link'%>
+<%= link_to 'delete', post_path(@post),
+                    method: :delete,
+                    data: {confirm: 'are you sure'},
+                    :class => 'btn btn-link' %>
+
+
+<%= render 'comments/comments' %>
+<%= render 'comments/form' %>
